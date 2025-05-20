@@ -9,32 +9,53 @@ import img6 from "../assets/img/blog6.jpg";
 
 const Blogs = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-24">
-      <div className=" flex flex-col items-center lg:flex-row justify-between">
+    <div className="min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-24">
+      <div className="flex flex-col items-center lg:flex-row justify-between">
         <div>
-          <h1 className=" text-4xl font-semibold text-center lg:text-start">
+          <h1 className="text-4xl font-semibold text-center lg:text-start">
             Latest Post
           </h1>
-          <p className=" mt-2 text-center lg:text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
-            quidem.
+          <p className="mt-2 text-center lg:text-start">
+            Explore helpful articles, health tips, and updates from our medical team.
           </p>
         </div>
-        <div className=" mt-4 lg:mt-0">
+        <div className="mt-4 lg:mt-0">
           <Button title="Our Articles" />
         </div>
       </div>
-      <div className=" my-8">
-        <div className=" flex flex-wrap justify-center gap-5">
-          <BlogCard img={img1} headlines="Unraveling the Mysteries of Sleep" />
-          <BlogCard img={img2} headlines="The Heart-Healthy Diet" />
+
+      <div className="my-8">
+        <div className="flex flex-wrap justify-center gap-5">
+          <BlogCard
+            img={img1}
+            headlines="Unraveling the Mysteries of Sleep"
+            description="Discover how quality sleep affects your body and ways to improve it."
+          />
+          <BlogCard
+            img={img2}
+            headlines="The Heart-Healthy Diet"
+            description="Learn about foods that promote cardiovascular health and energy."
+          />
           <BlogCard
             img={img3}
             headlines="Understanding Pediatric Vaccinations"
+            description="Everything parents need to know about vaccines and child immunity."
           />
-          <BlogCard img={img4} headlines="Navigating Mental Health" />
-          <BlogCard img={img5} headlines="The Importance of Regular Exercise" />
-          <BlogCard img={img6} headlines="Skin Health 101" />
+          <BlogCard
+            img={img4}
+            headlines="Navigating Mental Health"
+            description="Tips and insights on managing stress, anxiety, and emotional wellness."
+          />
+          <BlogCard
+            img={img5}
+            headlines="The Importance of Regular Exercise"
+            description="Why staying active matters and how to build a simple workout routine."
+          />
+          <BlogCard
+            img={img6}
+            headlines="Skin Health 101"
+            description="From hydration to SPF — how to keep your skin healthy every day."
+          />
         </div>
       </div>
     </div>

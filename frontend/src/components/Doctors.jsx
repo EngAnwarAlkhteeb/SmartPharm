@@ -88,8 +88,7 @@ const Doctors = () => {
             Our Doctors
           </h1>
           <p className=" mt-2 text-center lg:text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
-            quidem.
+            Get to know the experienced and caring professionals who are here to support your health every step of the way.
           </p>
         </div>
         <div className="flex gap-4 mt-3 lg:mt-0">
