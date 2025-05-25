@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Contact from "../models/Contact";
+import Contact from "./Contact";
 import { Navigate, useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
