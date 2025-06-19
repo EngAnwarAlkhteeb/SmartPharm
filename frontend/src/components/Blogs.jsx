@@ -65,12 +65,9 @@ const Blogs = () => {
             Latest Medical Posts
           </h1>
           <p className="mt-2 text-center lg:text-start">
-<<<<<<< HEAD
             Stay informed with the latest research, health tips, and medical breakthroughs
-=======
             Explore helpful articles, health tips, and updates from our medical
             team.
->>>>>>> 419b1f10b47646be8f037f4633084b8b6ac7dc08
           </p>
         </div>
         <div className="mt-4 lg:mt-0">
@@ -78,7 +75,7 @@ const Blogs = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
+
       <div className="flex flex-col md:flex-row gap-5 pt-14">
         {displayedBlogs.map((blog) => (
           <BlogCard
@@ -89,26 +86,25 @@ const Blogs = () => {
             onClick={() => handleBlogClick(blog)}
           />
         ))}
-=======
-      <div className="my-8">
-        <div className="flex flex-wrap justify-center gap-5">
-          {datas.map((data, index) => (
-            <BlogCard
-              key={index}
-              {...data}
-            />
-          ))}
+        <div className="my-8">
+          <div className="flex flex-wrap justify-center gap-5">
+            {datas.map((data, index) => (
+              <BlogCard
+                key={index}
+                {...data}
+              />
+            ))}
+          </div>
         </div>
->>>>>>> 419b1f10b47646be8f037f4633084b8b6ac7dc08
-      </div>
 
-      {/* Blog Modal */}
-      {selectedBlog && (
-        <BlogModal blog={selectedBlog} onClose={closeModal} />
-      )}
+        {/* Blog Modal */}
+        {selectedBlog && (
+          <BlogModal blog={selectedBlog} onClose={closeModal} />
+        )}
+      </div>
     </div>
   );
-};
+}
 
 export default Blogs;
 
