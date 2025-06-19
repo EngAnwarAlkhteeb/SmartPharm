@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+<<<<<<< HEAD
 import { FaBars, FaTimes, FaPills, FaSearch, FaPhoneAlt } from "react-icons/fa";
 import Button from "../layouts/Button";
+=======
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Contact from "./Contact";
+import { Navigate, useNavigate } from "react-router-dom";
+>>>>>>> 419b1f10b47646be8f037f4633084b8b6ac7dc08
 import SearchBar from "./SearchBar";
 import logo from "../assets/img/logo.png";
 import "../styles/Navbar.css";

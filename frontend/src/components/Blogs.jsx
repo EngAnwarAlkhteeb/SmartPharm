@@ -4,6 +4,45 @@ import Button from "../layouts/Button";
 import blogs from "../data/blogs";
 import BlogModal from "./BlogModal";
 
+const datas = [
+  {
+    img: img1,
+    headlines: "Unraveling the Mysteries of Sleep",
+    description:
+      "Discover how quality sleep affects your body and ways to improve it.",
+  },
+  {
+    img: img2,
+    headlines: "The Heart-Healthy Diet",
+    description:
+      "Learn about foods that promote cardiovascular health and energy.",
+  },
+  {
+    img: img3,
+    headlines: "Understanding Pediatric Vaccinations",
+    description:
+      "Everything parents need to know about vaccines and child immunity.",
+  },
+  {
+    img: img4,
+    headlines: "Navigating Mental Health",
+    description:
+      "Tips and insights on managing stress, anxiety, and emotional wellness.",
+  },
+  {
+    img: img5,
+    headlines: "The Importance of Regular Exercise",
+    description:
+      "Why staying active matters and how to build a simple workout routine.",
+  },
+  {
+    img: img6,
+    headlines: "Skin Health 101",
+    description:
+      "From hydration to SPF — how to keep your skin healthy every day.",
+  },
+];
+
 const Blogs = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
 
@@ -26,7 +65,12 @@ const Blogs = () => {
             Latest Medical Posts
           </h1>
           <p className="mt-2 text-center lg:text-start">
+<<<<<<< HEAD
             Stay informed with the latest research, health tips, and medical breakthroughs
+=======
+            Explore helpful articles, health tips, and updates from our medical
+            team.
+>>>>>>> 419b1f10b47646be8f037f4633084b8b6ac7dc08
           </p>
         </div>
         <div className="mt-4 lg:mt-0">
@@ -34,6 +78,7 @@ const Blogs = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="flex flex-col md:flex-row gap-5 pt-14">
         {displayedBlogs.map((blog) => (
           <BlogCard
@@ -44,6 +89,17 @@ const Blogs = () => {
             onClick={() => handleBlogClick(blog)}
           />
         ))}
+=======
+      <div className="my-8">
+        <div className="flex flex-wrap justify-center gap-5">
+          {datas.map((data, index) => (
+            <BlogCard
+              key={index}
+              {...data}
+            />
+          ))}
+        </div>
+>>>>>>> 419b1f10b47646be8f037f4633084b8b6ac7dc08
       </div>
 
       {/* Blog Modal */}
