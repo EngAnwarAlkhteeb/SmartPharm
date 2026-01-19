@@ -3,6 +3,13 @@ import BlogCard from "../layouts/BlogCard";
 import Button from "../layouts/Button";
 import blogs from "../data/blogs";
 import BlogModal from "./BlogModal";
+import img1 from "../assets/img/img1.png";
+import img2 from "../assets/img/img2.png";
+import img3 from "../assets/img/img3.png";
+import img4 from "../assets/img/img4.png";
+import img5 from "../assets/img/img5.png";
+import img6 from "../assets/img/img6.png";
+import "../styles/Navbar.css";
 
 const datas = [
   {
@@ -65,9 +72,9 @@ const Blogs = () => {
             Latest Medical Posts
           </h1>
           <p className="mt-2 text-center lg:text-start">
-            Stay informed with the latest research, health tips, and medical breakthroughs
-            Explore helpful articles, health tips, and updates from our medical
-            team.
+            Stay informed with the latest research, health tips, and medical
+            breakthroughs Explore helpful articles, health tips, and updates
+            from our medical team.
           </p>
         </div>
         <div className="mt-4 lg:mt-0">
@@ -75,36 +82,33 @@ const Blogs = () => {
         </div>
       </div>
 
-
-      <div className="flex flex-col md:flex-row gap-5 pt-14">
-        {displayedBlogs.map((blog) => (
-          <BlogCard
-            key={blog.id}
-            img={blog.image}
-            title={blog.title}
-            description={blog.summary}
-            onClick={() => handleBlogClick(blog)}
-          />
-        ))}
-        <div className="my-8">
-          <div className="flex flex-wrap justify-center gap-5">
-            {datas.map((data, index) => (
-              <BlogCard
-                key={index}
-                {...data}
-              />
-            ))}
-          </div>
+      {/* First scrollable row - displayedBlogs */}
+      <div className="overflow-x-auto scrollbar-hide my-8">
+        <div className="flex gap-5">
+          {displayedBlogs.map((blog) => (
+            <BlogCard
+              key={blog.id}
+              img={blog.image}
+              title={blog.title}
+              description={blog.summary}
+              onClick={() => handleBlogClick(blog)}
+            />
+          ))}
         </div>
-
-        {/* Blog Modal */}
-        {selectedBlog && (
-          <BlogModal blog={selectedBlog} onClose={closeModal} />
-        )}
       </div>
+
+      {/* Second scrollable row - datas */}
+      {/* <div className="overflow-x-auto scrollbar-hide my-8">
+        <div className="flex gap-5 min-w-max">
+          {datas.map((data, index) => (
+            <BlogCard key={index} {...data} />
+          ))}
+        </div>
+      </div> */}
+
+      {selectedBlog && <BlogModal blog={selectedBlog} onClose={closeModal} />}
     </div>
   );
-}
+};
 
 export default Blogs;
-

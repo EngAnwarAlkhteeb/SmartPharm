@@ -3,6 +3,9 @@ import Button from "../layouts/Button";
 import ServicesCard from "../layouts/ServicesCard";
 import ServiceModal from "./ServiceModal";
 import servicesData from "../data/services";
+import { RiMicroscopeLine } from "react-icons/ri";
+import { MdHealthAndSafety, MdLocalPharmacy } from "react-icons/md";
+import { FaHeartbeat, FaPills, FaSyringe } from "react-icons/fa";
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
